@@ -10,14 +10,15 @@ class Rule{
     
 public:
     Rule();
-    Rule(int size, std::vector<std::vector<int > > init);
+    Rule(int sizeX,int sizeY, std::vector<std::vector<int > > init);
     void NewState();
     std::vector<std::vector<int> > getState();
     ~Rule();
     
     
 private:
-    int m_sizegrid;
+    int m_sizeX;
+    int m_sizeY;
     std::vector<std::vector<int> > m_current;
    
     
