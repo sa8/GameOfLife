@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sarahazouvi/gameoflife/GameOfLife/main.cpp
+iostream
+-
+rule.h
+/Users/sarahazouvi/gameoflife/GameOfLife/rule.h
+fstream
+-
+
+/Users/sarahazouvi/gameoflife/GameOfLife/rule.cpp
+rule.h
+/Users/sarahazouvi/gameoflife/GameOfLife/rule.h
+
+/Users/sarahazouvi/gameoflife/GameOfLife/rule.h
+stdio.h
+-
+iostream
+-
+vector
+-
+
