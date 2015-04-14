@@ -35,7 +35,7 @@ Rule::Rule(int sizeX,int sizeY, std::vector< std::vector< int > > init){
     }
     for (int i=1;i<=m_sizeX;i++){
         for (int j=1;j<=m_sizeY;j++){
-            m_current[i][j]=init[i][j];
+            m_current[i][j]=init[i-1][j-1];
         }
         
     }
@@ -56,6 +56,10 @@ vector< vector< int> > Rule::getState(){
     return board;
 }
 
+int Rule::getSize(){
+    return m_sizeX*m_sizeY;
+}
+
 
 void Rule::NewState(){
      std::vector<std::vector<int > > m_new(m_sizeX+2,vector<int>(m_sizeY+2)) ;
@@ -65,7 +69,7 @@ void Rule::NewState(){
             int sum= m_current[i-1][j-1]+m_current[i-1][j]+m_current[i-1][j+1]+m_current[i][j-1]+m_current[i][j+1]+m_current[i+1][j-1]+m_current[i+1][j]+m_current[i+1][j+1]+m_current[i][j];
             if (sum==3) m_new[i][j]=1;
             else if (sum==4) m_new[i][j]=m_current[i][j];
-                else m_new[i][j]=0;
+            else m_new[i][j]=0;
         }
         
     }

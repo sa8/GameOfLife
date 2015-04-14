@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.1.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sarahazouvi/gameoflife/GameOfLife
+CMAKE_SOURCE_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/build
+CMAKE_BINARY_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,9 +73,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -103,65 +103,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named myexec
+# Target rules for targets named catch
 
 # Build rule for target.
-myexec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myexec
-.PHONY : myexec
+catch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 catch
+.PHONY : catch
 
 # fast build rule for target.
-myexec/fast:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/build
-.PHONY : myexec/fast
+catch/fast:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/build
+.PHONY : catch/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-rule.o: rule.cpp.o
-.PHONY : rule.o
+test.o: test.cpp.o
+.PHONY : test.o
 
 # target to build an object file
-rule.cpp.o:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.o
-.PHONY : rule.cpp.o
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/test.cpp.o
+.PHONY : test.cpp.o
 
-rule.i: rule.cpp.i
-.PHONY : rule.i
+test.i: test.cpp.i
+.PHONY : test.i
 
 # target to preprocess a source file
-rule.cpp.i:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.i
-.PHONY : rule.cpp.i
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-rule.s: rule.cpp.s
-.PHONY : rule.s
+test.s: test.cpp.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-rule.cpp.s:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.s
-.PHONY : rule.cpp.s
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -171,13 +147,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... myexec"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... rule.o"
-	@echo "... rule.i"
-	@echo "... rule.s"
+	@echo "... catch"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

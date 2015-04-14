@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/sarahazouvi/gameoflife/GameOfLife/main.cpp" "/Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles/myexec.dir/main.cpp.o"
-  "/Users/sarahazouvi/gameoflife/GameOfLife/rule.cpp" "/Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles/myexec.dir/rule.cpp.o"
+  "/Users/sarahazouvi/gameoflife/GameOfLife/test/test.cpp" "/Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles/catch.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

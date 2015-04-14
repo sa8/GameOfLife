@@ -13,6 +13,7 @@ public:
     Rule(int sizeX,int sizeY, std::vector<std::vector<int > > init);
     void NewState();
     std::vector<std::vector<int> > getState();
+    int getSize();
     ~Rule();
     
     

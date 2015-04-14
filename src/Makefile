@@ -103,6 +103,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named game_library
+
+# Build rule for target.
+game_library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 game_library
+.PHONY : game_library
+
+# fast build rule for target.
+game_library/fast:
+	$(MAKE) -f src/CMakeFiles/game_library.dir/build.make src/CMakeFiles/game_library.dir/build
+.PHONY : game_library/fast
+
+#=============================================================================
 # Target rules for targets named myexec
 
 # Build rule for target.
@@ -112,56 +125,21 @@ myexec: cmake_check_build_system
 
 # fast build rule for target.
 myexec/fast:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/build
+	$(MAKE) -f src/CMakeFiles/myexec.dir/build.make src/CMakeFiles/myexec.dir/build
 .PHONY : myexec/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+#=============================================================================
+# Target rules for targets named catch
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.o
-.PHONY : main.cpp.o
+# Build rule for target.
+catch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 catch
+.PHONY : catch
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-rule.o: rule.cpp.o
-.PHONY : rule.o
-
-# target to build an object file
-rule.cpp.o:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.o
-.PHONY : rule.cpp.o
-
-rule.i: rule.cpp.i
-.PHONY : rule.i
-
-# target to preprocess a source file
-rule.cpp.i:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.i
-.PHONY : rule.cpp.i
-
-rule.s: rule.cpp.s
-.PHONY : rule.s
-
-# target to generate assembly for a file
-rule.cpp.s:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/rule.cpp.s
-.PHONY : rule.cpp.s
+# fast build rule for target.
+catch/fast:
+	$(MAKE) -f test/CMakeFiles/catch.dir/build.make test/CMakeFiles/catch.dir/build
+.PHONY : catch/fast
 
 # Help Target
 help:
@@ -172,12 +150,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myexec"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... rule.o"
-	@echo "... rule.i"
-	@echo "... rule.s"
+	@echo "... game_library"
+	@echo "... catch"
 .PHONY : help
 
 

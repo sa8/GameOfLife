@@ -1,1 +1,0 @@
-/Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles/myexec.dir

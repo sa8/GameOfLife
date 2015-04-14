@@ -47,44 +47,44 @@ RM = /usr/local/Cellar/cmake/3.1.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sarahazouvi/gameoflife/GameOfLife
+CMAKE_SOURCE_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/build
+CMAKE_BINARY_DIR = /Users/sarahazouvi/gameoflife/GameOfLife/test/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/myexec.dir
+# Target rules for target CMakeFiles/catch.dir
 
 # All Build rule for target.
-CMakeFiles/myexec.dir/all:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/depend
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles  1 2
-	@echo "Built target myexec"
-.PHONY : CMakeFiles/myexec.dir/all
+CMakeFiles/catch.dir/all:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/depend
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles  1
+	@echo "Built target catch"
+.PHONY : CMakeFiles/catch.dir/all
 
 # Include target in all.
-all: CMakeFiles/myexec.dir/all
+all: CMakeFiles/catch.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/myexec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myexec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/build/CMakeFiles 0
-.PHONY : CMakeFiles/myexec.dir/rule
+CMakeFiles/catch.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/catch.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarahazouvi/gameoflife/GameOfLife/test/build/CMakeFiles 0
+.PHONY : CMakeFiles/catch.dir/rule
 
 # Convenience name for target.
-myexec: CMakeFiles/myexec.dir/rule
-.PHONY : myexec
+catch: CMakeFiles/catch.dir/rule
+.PHONY : catch
 
 # clean rule for target.
-CMakeFiles/myexec.dir/clean:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/clean
-.PHONY : CMakeFiles/myexec.dir/clean
+CMakeFiles/catch.dir/clean:
+	$(MAKE) -f CMakeFiles/catch.dir/build.make CMakeFiles/catch.dir/clean
+.PHONY : CMakeFiles/catch.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/myexec.dir/clean
+clean: CMakeFiles/catch.dir/clean
 .PHONY : clean
 
 #=============================================================================
