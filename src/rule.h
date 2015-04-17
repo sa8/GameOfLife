@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include<omp.h>
 
 
 class Rule{

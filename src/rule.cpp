@@ -65,6 +65,7 @@ void Rule::NewState(){
      std::vector<std::vector<int > > m_new(m_sizeX+2,vector<int>(m_sizeY+2)) ;
     
     for (int i=1;i<=m_sizeX;i++){
+        #pragma omp parallel for
         for (int j=1;j<=m_sizeY;j++){
             int sum= m_current[i-1][j-1]+m_current[i-1][j]+m_current[i-1][j+1]+m_current[i][j-1]+m_current[i][j+1]+m_current[i+1][j-1]+m_current[i+1][j]+m_current[i+1][j+1]+m_current[i][j];
             if (sum==3) m_new[i][j]=1;
