@@ -81,7 +81,7 @@ def main():
         colourGrid(item, lifeDict)
     drawGrid()
     pygame.display.update()
-    pygame.image.save(DISPLAYSURF,tab[0])
+    #pygame.image.save(DISPLAYSURF,tab[0]) #uncomment this line to download the video
 #main game loop
     for i in range(ITER-1):
         pygame.display.update()
@@ -90,7 +90,7 @@ def main():
             colourGrid(item, lifeDict)
         drawGrid()
         pygame.display.update()
-        pygame.image.save(DISPLAYSURF,tab[i+1])
+        #pygame.image.save(DISPLAYSURF,tab[i+1]) #uncomment this line to download the video
         FPSCLOCK.tick(FPS)
     pygame.display.flip()
 
