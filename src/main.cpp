@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     // Obtain an output file that describes the state of the game:
     ofstream out("./output.txt");
     out<<ITERATION<<'\t';
-    ifstream in("./input.txt");
+    ifstream in("../../input.txt");
     int sizex, sizey;
     in>>sizex;
     in>>sizey;
