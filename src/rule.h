@@ -18,6 +18,8 @@ public:
     void NewStateParallel();
     std::vector<std::vector<int> > getState();
     int getSize();
+    int getSizeX();
+    int getSizeY();
     ~Rule();
     
     

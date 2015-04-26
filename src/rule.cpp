@@ -81,6 +81,13 @@ vector< vector< int> > Rule::getState(){
 int Rule::getSize(){
     return m_sizeX*m_sizeY;
 }
+int Rule::getSizeX(){
+    return m_sizeX;
+}
+int Rule::getSizeY(){
+    return m_sizeY;
+}
+
 void Rule::NewState(){
     std::vector<std::vector<int > > m_new(m_sizeX+2,vector<int>(m_sizeY+2)) ;
     
